@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@500&display=swap');
+
+
+  @media screen and (min-width: 960px) {
+
+    .aboutme{
+        margin-bottom: 45%;
+    }
+    .image-container {
+        position: relative;
+        display: flex;
+        justify-content: center;
+      flex-direction: column;
+      }
+      .image-container img{
+        border-radius: 20px;
+      }
+      
+      
+      .image-container img:nth-child(1) {
+        position: absolute;
+        top: 130%;
+        left: 10%;
+        opacity: 0.9;
+        width: 25%;
+        z-index: 3;
+      }
+      
+      .image-container img:nth-child(2) {
+        position: relative;
+        left: 10%;    
+        width: 25%;
+        z-index: 2;
+        transform: translateX(-20%);
+      }
+      
+      .image-container img:nth-child(3) {
+        position: absolute;
+        top: 50%;
+        width: 25%;
+        z-index: 1;
+        left: 30%;
+        transform: translateX(-40%);
+      }
+      .about{
+        top: 120%;
+        position: absolute;
+        left: 55%;
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+      }
+      .about a {
+        font-family: 'Prompt', sans-serif;
+        color: black;
+        font-size: 15px;
+        margin-left: 25%;
+        margin-top: 2%;
+        padding: 10px;
+        border: 1px solid #007555;
+        text-decoration: none;
+        border-radius: 20px;
+        width: 40%;
+      }
+      .about a:hover{
+        background-color: #007555;
+        color: white;
+      }
+      .about h2{
+        color: #007555;
+        margin-bottom: 3%;
+        font-weight: 350;
+        font-family: 'Prompt', sans-serif;
+      }
+      .about p{
+        font-size: 1.1em;
+        font-family: 'Prompt', sans-serif;
+        text-align: start;
+  }
+  }
+
+  @media screen and (max-width: 960px) {
+    .aboutme{
+        margin-bottom: 25%;
+    }
+    .image-container{
+        position: relative;
+        left: 5%;
+        margin-bottom: 10%;
+        display: flex;
+        flex-direction: column;
+    }
+    .image-container img{
+        border-radius: 10px;
+        margin-bottom: 3%;
+        width: 90%;
+    }
+    .about a {
+        font-family: 'Prompt', sans-serif;
+        color: black;
+        font-size: 15px;
+        padding: 10px 50px 10px 50px;
+        border: 1px solid #007555;
+        text-decoration: none;
+        border-radius: 20px;
+      }
+      .about a:hover{
+        background-color: #007555;
+        color: white;
+      }
+    h2{
+       text-align: center;
+       color: #007555;
+       font-weight: 350; 
+       margin-bottom: 5%;
+    }
+    .about p{
+        text-align: center;
+        font-size: 1.1em;
+    }
+  }

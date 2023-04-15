@@ -1,0 +1,33 @@
+
+@media screen and (min-width: 960px) {
+    .pictures{
+        padding: 70px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .image{
+        margin-left: 1%;
+        margin-bottom: 2%;
+        width: 25%;
+    }
+    .passion{
+        margin-top: 10%;
+        color: #007555;
+        font-size: 2em;
+    }
+}
+@media screen and (max-width: 960px) {
+    .pictures{
+        margin-top: 10%;
+        padding: 40px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .image{
+        margin-left: 1%;
+        margin-bottom: 2%;
+        width: 100%;
+    }
+}
