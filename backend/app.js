@@ -2,6 +2,8 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const nodemailer = require('nodemailer');
+require('dotenv').config();
+const apiKey = process.env.API_KEY;
 
 const app = express();
 const port = process.env.PORT || 5000;
@@ -22,7 +24,7 @@ app.post('/send', (req, res) => {
     service: 'gmail',
     auth: {
       user: 'mtakoumba@gmail.com',
-      pass: 'djvxpxudnpmqurla',
+      pass: apiKey,
     },
   });
 
