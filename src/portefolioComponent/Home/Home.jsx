@@ -29,7 +29,7 @@ const Home = () => {
         <h2>I am Web Developer and I use many technologies like :  &nbsp;&nbsp;</h2>
         <span ><Typewriter
             options={{
-              strings: ["HTML", "CSS","JAVASCRIPT", "BOOTSTRAP", "REACT","JAVA"],
+              strings: ["HTML", "CSS","JAVASCRIPT", "BOOTSTRAP", "REACT","JAVA", "NODE JS"],
               autoStart: true,
               loop: true,
             }}

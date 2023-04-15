@@ -1,10 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@500&display=swap');
 
 
   @media screen and (min-width: 960px) {
 
     .aboutme{
-        margin-bottom: 45%;
+        margin-bottom: 35%;
     }
     .image-container {
         position: relative;
@@ -43,7 +42,7 @@
         transform: translateX(-40%);
       }
       .about{
-        top: 120%;
+        top: 100%;
         position: absolute;
         left: 55%;
         display: flex;
@@ -51,37 +50,42 @@
         width: 40%;
       }
       .about a {
-        font-family: 'Prompt', sans-serif;
+        font-family: var(--police);
         color: black;
         font-size: 15px;
         margin-left: 25%;
         margin-top: 2%;
         padding: 10px;
-        border: 1px solid #007555;
+        border: 1px solid var(--couleur-primaire);
         text-decoration: none;
         border-radius: 20px;
         width: 40%;
       }
       .about a:hover{
-        background-color: #007555;
+        background-color: var(--couleur-primaire);
         color: white;
       }
       .about h2{
-        color: #007555;
+        color: var(--couleur-primaire);
         margin-bottom: 3%;
+        
         font-weight: 350;
-        font-family: 'Prompt', sans-serif;
+    
+        font-family:var(--police);
       }
       .about p{
+        color: black;
         font-size: 1.1em;
-        font-family: 'Prompt', sans-serif;
+        font-weight: 300;
+        font-family: var(--police);
         text-align: start;
   }
   }
 
   @media screen and (max-width: 960px) {
     .aboutme{
-        margin-bottom: 25%;
+      margin-top: 25%;
+        margin-bottom: 20%;
     }
     .image-container{
         position: relative;
@@ -96,25 +100,26 @@
         width: 90%;
     }
     .about a {
-        font-family: 'Prompt', sans-serif;
+        font-family: var(--police);
         color: black;
         font-size: 15px;
         padding: 10px 50px 10px 50px;
-        border: 1px solid #007555;
+        border: 1px solid var(--couleur-primaire);
         text-decoration: none;
         border-radius: 20px;
       }
       .about a:hover{
-        background-color: #007555;
+        background-color: var(--couleur-primaire);
         color: white;
       }
     h2{
        text-align: center;
-       color: #007555;
+       color: var(--couleur-primaire);
        font-weight: 350; 
        margin-bottom: 5%;
     }
     .about p{
+      margin-bottom: 10%;
         text-align: center;
         font-size: 1.1em;
     }

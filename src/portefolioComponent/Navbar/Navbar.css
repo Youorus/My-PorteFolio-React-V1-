@@ -1,8 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Prompt:wght@200&display=swap');
 
+:root{
+  --Couleur-seconadire:  #fff;
+  --color-links:#333;
+  --police: 'Prompt', sans-serif;
+  --couleur-primaire: #007555;
+}
 
 .navbar {
-  background-color: #fff;
+  background-color:var(--Couleur-seconadire);
   height: 80px;
   display: flex;
   justify-content: center;
@@ -26,14 +32,12 @@
 }
 
 .navbar-logo {
-  color: #333;
   cursor: pointer;
   font-size: 2rem;
 }
 
 .menu-icon {
   display: none;
-  color: #333;
   cursor: pointer;
   font-size: 2rem;
 }
@@ -54,8 +58,8 @@
 }
 
 .nav-links {
-  color: #333;
-  font-family: 'Prompt', sans-serif;
+  color: var(--color-links);
+  font-family: var(--police);
   font-weight: 130;
   display: flex;
   align-items: center;

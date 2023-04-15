@@ -4,13 +4,21 @@
     color: black;
     font-size: 15px;
     padding: 10px 50px 10px 50px;
-    border: 1px solid #007555;
+    border: 1px solid var(--couleur-primaire);
     text-decoration: none;
     border-radius: 20px;
   }
   .gitLink:hover{
-    background-color: #007555;
+    background-color: var(--couleur-primaire);
     color: white;
+    
+  }
+  img{
+    width: 50%;
+  }
+  .project{
+    margin-top: 10%;
+    font-size: 2.5em;
   }
 @media screen and (min-width: 960px) {
     .carou-style{

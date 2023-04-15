@@ -9,6 +9,12 @@ const Navbar = () => {
   const handleToggle = () => {
     setIsOpen(!isOpen);
   };
+  function handleClick(event) {
+    event.preventDefault();
+    const target = event.target.hash;
+    document.querySelector(target).scrollIntoView({ behavior: 'smooth' });
+  }
+
 
   return (
     <nav className="navbar">
@@ -22,22 +28,27 @@ const Navbar = () => {
         <ul className={isOpen ? 'nav-menu active' : 'nav-menu'}>
           <li className="nav-item">
             <a href="/" className="nav-links">
-              About
+            Home
             </a>
           </li>
           <li className="nav-item">
             <a href="/" className="nav-links">
-              Competences
+            About
             </a>
           </li>
           <li className="nav-item">
             <a href="/" className="nav-links">
-              Projets
+            Skills
             </a>
           </li>
           <li className="nav-item">
             <a href="/" className="nav-links">
-              Passions
+            Hobbies/Passions
+            </a>
+          </li>
+          <li className="nav-item">
+            <a href="#Peojects" className="nav-links">
+            Projects
             </a>
           </li>
           <li className="nav-item">

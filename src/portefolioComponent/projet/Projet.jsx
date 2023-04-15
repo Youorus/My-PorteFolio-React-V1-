@@ -1,49 +1,47 @@
-import React from 'react';
-import { Carousel } from 'react-bootstrap';
-import "./Projet.css"
+import { useState, React } from "react";
+import { Carousel } from "react-bootstrap";
+import { BsChevronLeft, BsChevronRight } from 'react-icons/bs';
+import image1 from "./image1.png";
+import image2 from "./image2.png";
+import image3 from "./image3.png";
+import "./Projet.css";
 
 function Projet() {
-  return (<div>
-<Carousel className='carou-style'>
-      <Carousel.Item>
-        <img
-          className="d-block w-100"
-          src="https://www.xenonstack.com/hubfs/xenonstack-reactjs-project-structure.png"
-          alt="First slide"
-        />
-        <Carousel.Caption>
-          <h3>First slide label</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-        <img
-          className="d-block w-100"
-          src="https://i.ytimg.com/vi/ly3m6mv5qvg/maxresdefault.jpg"
-          alt="Second slide"
-        />
-        <Carousel.Caption>
-          <h3>Second slide label</h3>
-          <p>Aliquam sit amet gravida nibh, facilisis gravida odio.</p>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-        <img
-          className="d-block w-100"
-          src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20220310072422/7-Best-React-Project-Ideas-for-Beginners-in-2022.png"
-          alt="Third slide"
-        />
-        <Carousel.Caption>
-          <h3>Third slide label</h3>
-          <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-        </Carousel.Caption>
-      </Carousel.Item>
-    </Carousel>
-    <a className='gitLink' href="/">See More on Git </a> 
-  </div>
-    
+  const [index, setIndex] = useState(0);
+
+  const handleSelect = (selectedIndex) => {
+    setIndex(selectedIndex);
+  };
+  const handleLinkClick = () => {
+    window.open("https://github.com/Youorus?tab=repositories", "_blank");
+  };
+  return (
+    <div>
+      <h2 className="project">Projects</h2>
+      <Carousel
+        prevIcon={<BsChevronLeft style={{ color: "#007555" }} />}
+        nextIcon={<BsChevronRight style={{ color: "#007555" }} />}
+        prevLabel=""
+        nextLabel=""
+        onSelect={handleSelect}
+        className="carou-style"
+        fade
+      >
+        <Carousel.Item>
+          <img className="d-block w-100" src={image1} alt="First slide" />
+        </Carousel.Item>
+        <Carousel.Item>
+          <img className="d-block w-100" src={image2} alt="Second slide" />
+        </Carousel.Item>
+        <Carousel.Item>
+          <img className="d-block w-100" src={image3} alt="Third slide" />
+        </Carousel.Item>
+      </Carousel>
+      <a className="gitLink" href="#" onClick={handleLinkClick}>
+        See More on Git{" "}
+      </a>
+    </div>
   );
 }
-
 
 export default Projet;

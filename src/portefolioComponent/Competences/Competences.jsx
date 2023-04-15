@@ -5,11 +5,12 @@ import "./Competence.css";
 
 const Competences = () => {
   return (
-    <div>
+    <div className="skills">
+    <h2>Skills</h2>
       <div className="card-items">
       <div className="item-card">
-      {items.map((item, i) => {
-            return(<Cards color={item.color} key={item.i} img={item.imgUrl} title={item.title} text={item.text} val={item.pourcentage} />)   
+      {items.map((item) => {
+            return(<Cards color={item.color} key={item.id} img={item.imgUrl} title={item.title} text={item.text} val={item.pourcentage} />)   
         })}
       </div>
         

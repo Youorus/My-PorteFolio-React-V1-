@@ -5,7 +5,7 @@ import "./Passions.css"
 const Passions = () => {
   return (
     <div>
-    <h2 className='passion' >Passions</h2>
+    <h2 className='passion' > Hobbies/Passions</h2>
   <div className='pictures'>
         {picture.map((item)=>{
             return(
