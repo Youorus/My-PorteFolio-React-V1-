@@ -7,10 +7,27 @@ const apiKey = process.env.API_KEY;
 
 const app = express();
 const port = process.env.PORT || 5000;
+const allowedHeaders = ['Content-Type', 'Authorization', 'Accept', 'Accept-Language', 'X-Requested-With', 'Access-Control-Allow-Origin'];
+app.use(function(req, res, next) {
+  allowedHeaders.forEach((header) => {
+    res.header(header, req.headers[header]);
+  });
+  next();
+});
+app.set('trust proxy', true);
+app.use((req, res, next) => {
+  if (req.header('x-forwarded-proto') !== 'https') {
+    res.redirect(`https://${req.header('host')}${req.url}`);
+  } else {
+    next();
+  }
+});
+
 
 // Middleware pour analyser les données du formulaire
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+
 
 // Middleware pour autoriser les requêtes cross-origin
 app.use(cors());
