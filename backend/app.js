@@ -6,7 +6,8 @@ require('dotenv').config();
 const apiKey = process.env.API_KEY;
 
 const app = express();
-let port = process.env.PORT;
+const port = process.env.PORT || 5000;
+
 // Middleware pour analyser les données du formulaire
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
@@ -52,11 +53,6 @@ app.post('/send', (req, res) => {
 });
 
 // Démarrage du serveur
-
-if (port == null || port == "") {
-  port = 8000;
-}
-app.listen(port);
 app.listen(port, () => {
   console.log(`Serveur démarré sur le port ${port}`);
 });
